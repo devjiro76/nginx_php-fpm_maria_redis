@@ -1,0 +1,28 @@
+version: "2"
+
+services:
+    nginx:
+        build: dockers/nginx
+        volumes_from:
+            - php-fpm:rw
+        ports:
+            - "80:80"
+            - "443:443"
+        depends_on:
+            - mariadb
+            - php-fpm
+            - redis
+    php-fpm:
+        build: dockers/php-fpm
+        volumes:
+            - ${PWD}/web/:/usr/share/nginx/html/:rw
+    mariadb:
+        build: dockers/mariadb
+        ports:
+            - "3306:3306"
+        volumes:
+            - ${PWD}/db/:/var/lib/mysql/
+        environment:
+            - MYSQL_ROOT_PASSWORD=YOUR_PASSWD
+    redis:
+        image: redis
