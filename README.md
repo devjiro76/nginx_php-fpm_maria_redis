@@ -8,28 +8,28 @@ curl -L https://github.com/docker/compose/releases/download/1.14.0-rc2/docker-co
 chmod +x /usr/local/bin/docker-compose
 ```
 
-#### Clone project
+#### 1) Clone project
 ```
 git clone https://github.com/devjiro76/nginx_php-fpm_maria_redis
 cd nginx_php-fpm_maria_redis
 ```
 
-#### Make the project as yours
+#### 2) Make this project your owns (If you want)
 ```
 rm -rf .git
 ```
 
-#### test with phpinfo
+#### 3) test with phpinfo
 Create a new file as "web/phpinfo.php"
 ```
 <?php
 phpinfo();
 ```
 
-#### RUN
+#### 4) RUN
 ```
 docker-compose up -d
 ```
 
-#### Check phpinfo
+#### 5) Check phpinfo
 Open `http://localhost/phpinfo.php` on your browser
