@@ -26,10 +26,16 @@ Create a new file as "web/phpinfo.php"
 phpinfo();
 ```
 
-#### 4) RUN
+#### 4) Set your DB Root Password
+```
+vi docker-compose.yml
+```
+and change the '<YOUR_PASSWD>' to what you want
+
+#### 5) RUN
 ```
 docker-compose up -d
 ```
 
-#### 5) Check phpinfo
+#### 6) Check phpinfo
 Open `http://localhost/phpinfo.php` on your browser

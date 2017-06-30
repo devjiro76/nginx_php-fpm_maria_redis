@@ -23,6 +23,6 @@ services:
         volumes:
             - ${PWD}/db/:/var/lib/mysql/
         environment:
-            - MYSQL_ROOT_PASSWORD=YOUR_PASSWD
+            - MYSQL_ROOT_PASSWORD=<YOUR_PASSWD>
     redis:
         image: redis
