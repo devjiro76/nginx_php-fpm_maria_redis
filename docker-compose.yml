@@ -24,5 +24,9 @@ services:
             - ${PWD}/db/:/var/lib/mysql/
         environment:
             - MYSQL_ROOT_PASSWORD=<YOUR_PASSWD>
+            - MYSQL_DATABASE=<YOUR_DB>
+            - MYSQL_USER=<YOUR_ID>
+            - MYSQL_PASSWORD=<YOUR_PASSWD>
+            - TZ=Asia/Seoul
     redis:
         image: redis
