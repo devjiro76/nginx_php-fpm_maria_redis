@@ -20,8 +20,8 @@ services:
         build: dockers/mariadb
         ports:
             - "3306:3306"
-        volumes:
-            - ${PWD}/db/:/var/lib/mysql/
+        #volumes:
+        #    - ${PWD}/db/:/var/lib/mysql/
         environment:
             - MYSQL_ROOT_PASSWORD=<YOUR_PASSWD>
             - MYSQL_DATABASE=<YOUR_DB>
